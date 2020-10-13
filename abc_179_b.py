@@ -1,13 +1,13 @@
 N = int(input())
 v = []
-for i in range(N):
-    v.append(input().split())
-f = False
-for i in range(N - 2):
-    if v[i][0] == v[i][1] and v[i+1][0] == v[i+1][1] and v[i+2][0] == v[i+2][1]:
-        f = True
-        break
-if f:
-    print('Yes')
-else:
-    print('No')
+f = 0
+for _ in range(N):
+    D = input().split()
+    if D[0] == D[1]:
+        f += 1
+    else:
+        f = 0
+    if (f == 3):
+        print('Yes')
+        exit()
+print('No')
