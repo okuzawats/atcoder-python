@@ -1,5 +1,4 @@
 N = int(input())
-v = []
 f = 0
 for _ in range(N):
     D = input().split()
