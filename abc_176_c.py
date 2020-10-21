@@ -1,10 +1,7 @@
 N = int(input())
-A = list(map(int, input().split()))
-s = 0
-for i in range(N - 1):
-    if A[i] <= A[i + 1]:
-        continue
-    h = A[i] - A[i + 1]
-    A[i + 1] += h
-    s += h
+A = map(int, input().split())
+m, s = 0, 0
+for a in A:
+    m = max(m, a)
+    s += m - a
 print(s)
