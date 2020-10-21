@@ -1,9 +1,10 @@
 N = int(input())
-A = map(int, input().split())
+A = list(map(int, input().split()))
 s = 0
-p = 10 ** 9
-for a in A:
-    if a > p:
-        s += a - p
-    p = a
+for i in range(N - 1):
+    if A[i] <= A[i + 1]:
+        continue
+    h = A[i] - A[i + 1]
+    A[i + 1] += h
+    s += h
 print(s)
