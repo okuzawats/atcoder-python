@@ -1,5 +1,1 @@
-X = int(input())
-if X >= 30:
-    print('Yes')
-else:
-    print('No')
+print(['No', 'Yes'][int(input()) >= 30])
