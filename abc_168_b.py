@@ -1,6 +1,3 @@
 K = int(input())
 S = input()
-if len(S) <= K:
-    print(S)
-else:
-    print('{}...'.format(S[:K]))
+print('{}...'.format(S[:K]) if len(S) > K else S)
