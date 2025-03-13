@@ -1,12 +1,5 @@
 n = int(input())
 a = [*map(int, input().split())]
 
-ans = True
-for i in range(n-1):
-    if a[i] < a[i+1]:
-        continue
-    else:
-        ans = False
-        break
-
+ans = all(i<j for i,j in zip(a,a[1:]))
 print('Yes' if ans else 'No')
