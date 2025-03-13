@@ -12,3 +12,9 @@ Installed Python 3.11.4 in 2.30s
 % uv python pin 3.11.4
 Pinned `.python-version` to `3.11.4`
 ```
+
+## Run
+
+```
+% uv run main.py
+```
