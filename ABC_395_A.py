@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int, input().split()))
+a = [*map(int, input().split())]
 
 ans = True
 for i in range(n-1):
@@ -9,7 +9,4 @@ for i in range(n-1):
         ans = False
         break
 
-if ans:
-    print("Yes")
-else:
-    print("No")
+print('Yes' if ans else 'No')
