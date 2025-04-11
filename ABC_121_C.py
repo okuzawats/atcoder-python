@@ -1,13 +1,8 @@
 N, M = map(int, input().split())
-AB = [[*map(int, input().split())] for _ in range(N)]
-AB.sort()
-
-c, sum = 0, 0
-for ab in AB:
-    a = ab[0]
-    for i in range(ab[1]):
-        c += 1
-        sum += a
+c, s = 0, 0
+for a, b in sorted([[*map(int, input().split())] for _ in range(N)]):
+    for i in range(b):
+        c, s = c + 1, s + a
         if c == M:
-            print(sum)
+            print(s)
             exit()
