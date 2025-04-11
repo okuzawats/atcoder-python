@@ -1,5 +1,2 @@
 D = int(input())
-s = "Christmas"
-for _ in range(D, 25):
-    s += " Eve"
-print(s)
+print("Christmas" + " Eve" * (25 - D))
