@@ -1,2 +1,1 @@
-S, T = input(), input()
-print("Yes" if "".join(sorted(S)) < "".join(sorted(T, reverse=True)) else "No")
+print("Yes" if sorted(input()) < sorted(input(), reverse=True) else "No")
