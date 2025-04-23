@@ -5,42 +5,23 @@ for _ in range(3):
 N = int(input())
 B = [int(input()) for _ in range(N)]
 
-b = [False] * 9
+bingo = [A[i] in B for i in range(9)]
+ans, y = "No", "Yes"
+if bingo[0] and bingo[1] and bingo[2]:
+    ans = y
+elif bingo[3] and bingo[4] and bingo[5]:
+    ans = y
+elif bingo[6] and bingo[7] and bingo[8]:
+    ans = y
+elif bingo[0] and bingo[3] and bingo[6]:
+    ans = y
+elif bingo[1] and bingo[4] and bingo[7]:
+    ans = y
+elif bingo[2] and bingo[5] and bingo[8]:
+    ans = y
+elif bingo[0] and bingo[4] and bingo[8]:
+    ans = y
+elif bingo[2] and bingo[4] and bingo[6]:
+    ans = y
 
-for i in range(9):
-    if A[i] in B:
-        b[i] = True
-
-if b[0] and b[1] and b[2]:
-    print("Yes")
-    exit()
-
-if b[3] and b[4] and b[5]:
-    print("Yes")
-    exit()
-
-if b[6] and b[7] and b[8]:
-    print("Yes")
-    exit()
-
-if b[0] and b[3] and b[6]:
-    print("Yes")
-    exit()
-
-if b[1] and b[4] and b[7]:
-    print("Yes")
-    exit()
-
-if b[2] and b[5] and b[8]:
-    print("Yes")
-    exit()
-
-if b[0] and b[4] and b[8]:
-    print("Yes")
-    exit()
-
-if b[2] and b[4] and b[6]:
-    print("Yes")
-    exit()
-
-print("No")
+print(ans)
