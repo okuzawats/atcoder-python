@@ -1,4 +1,4 @@
 import math
 
-h, a = [*map(int, input().split())]
-print(math.ceil(h / a))
+H, A = map(int, input().split())
+print(math.ceil(H / A))
