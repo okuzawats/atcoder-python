@@ -1,8 +1,6 @@
-n = int(input())
-a = [*map(int, input().split())]
-
+N, A = int(input()), [*map(int, input().split())]
 c = 0
-while all(i % 2 < 1 for i in a):
+while all(i % 2 < 1 for i in A):
     c += 1
-    a = [i // 2 for i in a]
+    A = [i // 2 for i in A]
 print(c)
