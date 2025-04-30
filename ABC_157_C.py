@@ -10,4 +10,5 @@ for i in range(10 ** (N - 1), 10**N):
         else:
             print(num)
             exit()
-print(-1)
+else:
+    print(-1)
