@@ -5,10 +5,8 @@ for i in range(10**N):
     n = str(i)
     if len(n) != N:
         continue
-    for s, c in S:
-        if n[s - 1] != str(c):
-            break
-    else:
-        print(n)
-        exit()
+    if any(n[s - 1] != str(c) for s, c in S):
+        continue
+    print(n)
+    exit()
 print(-1)
