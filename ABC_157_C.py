@@ -1,7 +1,7 @@
 N, M = map(int, input().split())
 S = [[*map(int, input().split())] for _ in range(M)]
 
-for i in range(10 ** (N - 1), 10**N):
+for i in range(10**N):
     num = str(i)
     if len(num) == N:
         for s, c in S:
@@ -10,5 +10,4 @@ for i in range(10 ** (N - 1), 10**N):
         else:
             print(num)
             exit()
-else:
-    print(-1)
+print(-1)
