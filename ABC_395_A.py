@@ -1,5 +1,2 @@
-n = int(input())
-a = [*map(int, input().split())]
-
-ans = all(i < j for i, j in zip(a, a[1:]))
-print("Yes" if ans else "No")
+N, A = int(input()), [*map(int, input().split())]
+print("Yes" if all(i < j for i, j in zip(A, A[1:])) else "No")
