@@ -1,4 +1,1 @@
-N, S = int(input()), set()
-for i in range(N):
-    S.add(input())
-print(len(S))
+print(len(set([input() for _ in range(int(input()))])))
