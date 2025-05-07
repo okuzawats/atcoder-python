@@ -1,4 +1,3 @@
 import math
 
-N = int(input())
-print(2 * N // math.gcd(2, N))
+print(math.lcm(2, int(input())))
