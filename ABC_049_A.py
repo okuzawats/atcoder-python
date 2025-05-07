@@ -1,1 +1,6 @@
-print("vowel" if input() == ("a" or "e" or "i" or "o" or "u") else "consonant")
+S = input()
+
+if S == "a" or S == "e" or S == "i" or S == "o" or S == "u":
+    print("vowel")
+else:
+    print("consonant")
