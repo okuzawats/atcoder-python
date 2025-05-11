@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 N = int(input())
-A = [*map(int), input().split()]
+A = [*map(int, input().split())]
 dct, cnt = defaultdict(int), 0
 
 for a in A:
