@@ -1,9 +1,7 @@
+from collections import Counter
+from functools import reduce
+
 N = int(input())
 A = [*map(int, input().split())]
-
-cnt = 0
-for i in range(N):
-    for j in range(i + 1, N):
-        if A[i] != A[j]:
-            cnt += 1
-print(cnt)
+c = reduce(lambda acc, a: acc - a * (a - 1) // 2, Counter(A).values(), N * (N - 1) // 2)
+print(c)
