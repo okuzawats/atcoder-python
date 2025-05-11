@@ -1,7 +1,7 @@
 from collections import Counter
 from functools import reduce
 
-N = int(input())
-A = [*map(int, input().split())]
-c = reduce(lambda acc, a: acc - a * (a - 1) // 2, Counter(A).values(), N * (N - 1) // 2)
-print(c)
+nc2 = lambda n: n * (n - 1) // 2
+ttl = nc2(int(input()))
+cnt = Counter([*map(int, input().split())]).values()
+print(reduce(lambda acc, v: acc - nc2(v), cnt, ttl))
