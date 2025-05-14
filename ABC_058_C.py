@@ -1,16 +1,15 @@
 N = int(input())
 S = [input() for _ in range(N)]
-T = [[0] * N for _ in range(26)]
+count_min = [10**18] * 26
 
-for i in range(N):
-    for j in range(26):
-        # i=0 => S1, ..., i=N-1 => Sn
-        # j=0 => a, ..., j=25 => z
-        # a~zそれぞれについて、Snに何文字含まれているかをカウントする。
-        T[j][i] = S[i].count(chr(j + 96))
+for s in S:
+    count_s = [0] * 26
+    for c in s:
+        count_s[ord(c) - 97] += 1
+    for i in range(26):
+        count_min[i] = min(count_min[i], count_s[i])
 
-str = ""
+ans = ""
 for i in range(26):
-    # 最も出現回数の少なかった回数分、文字を連結する。
-    str += chr(i + 96) * min(T[i])
-print(str)
+    ans += chr(i + 97) * count_min[i]
+print(ans)
