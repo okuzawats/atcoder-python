@@ -1,2 +1,2 @@
 S, T = input(), input()
-print(len([1 for s, t in zip(S, T) if s == t]))
+print(sum([s == t for s, t in zip(S, T)]))
