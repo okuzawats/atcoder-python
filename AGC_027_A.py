@@ -7,5 +7,5 @@ for a in A:
         cnt += 1
         X -= a
 
-ans = cnt - 1 if X > 0 else cnt
+ans = cnt - 1 if cnt == N and X > 0 else cnt
 print(ans)
