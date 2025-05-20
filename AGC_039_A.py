@@ -15,4 +15,5 @@ while i < len(S2):
         i += 1
     i += 1
 
-print((K - 2) * c + c2)
+count = c2 - c
+print((count * (K - 1)) + c)
